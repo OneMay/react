@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=production mocha --compilers js:babel-core/register --require ignore-styles",
     "build": "webpack",
     "dev": "webpack-dev-server --hot --inline"
   },
@@ -14,21 +14,44 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
+    "bootstrap": "^4.1.1",
+    "chai": "^4.1.2",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^2.0.0",
     "fast-json-stable-stringify": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "ignore-styles": "^5.0.1",
     "mamacro": "^0.0.3",
+    "mocha": "^5.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "uuid": "^3.2.1",
     "webpack": "^4.10.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "actions": "^1.3.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "isomorphic-fetch": "^2.2.1",
+    "marked": "^0.4.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "reducers": "^3.0.0-alpha",
+    "redux": "^4.0.0",
+    "redux-promise-middleware": "^5.1.1",
+    "redux-thunk": "^2.3.0"
   }
 }
